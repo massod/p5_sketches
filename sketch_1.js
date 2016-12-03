@@ -1,15 +1,41 @@
-
+var circle = [100];
 
 function setup()
-{   background(255,0,0);
+{  
     createCanvas(400,400);
+    for( var i = 0; i < circle; i++)
+    {
+        circle[i] = new Bubble();
+    }
 }
 
 function draw()
 {
-   ellipse(width/2, height/2, 50,50);
-   if( mouseX > width || mouseX < 0)
-   {
-      fill(255, 0,0);
-   }
+  background(0);
+  for( var i = 0; i < circle.length; i++)
+  {
+       circle[i].display();
+      circle[i].move();
+  }
+}
+
+
+function Bubble()
+{
+     this.x = 200;
+     this.y = 200;
+     this.dia = 35;
+    
+     this.display = function()
+     {
+         noFill();
+         stroke(255);
+         ellipse(this.x, this.y, this.dia, this.dia);
+     }
+     
+     this.move = function()
+     {
+         this.x += random(-2, 2);
+         this.y += random(-2, 2);
+     }
 }
