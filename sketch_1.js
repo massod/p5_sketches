@@ -3,7 +3,7 @@ var circle = [100];
 function setup()
 {  
     createCanvas(400,400);
-    for( var i = 0; i < circle; i++)
+    for( var i = 0; i < 100; i++)
     {
         circle[i] = new Bubble();
     }
