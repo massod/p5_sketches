@@ -1,3 +1,6 @@
+
+//draw circle and ellipses are fun 
+
 var circle = [100];
 
 function setup()
